@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^api/categories$', category.getAllCategories),
     url(r'^api/categories/(?P<categoryID>[0-9]+)$', category.categoryDetails),
     url(r'^api/products/categories$', connectors.connectPaC),
+    url(r'^api/products/suppliers$', connectors.connectPaS),
 
 ]

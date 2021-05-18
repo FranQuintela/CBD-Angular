@@ -10,6 +10,22 @@ class Category(StructuredNode):
     categoryName = StringProperty()
     picture = StringProperty()
 
+class Supplier(StructuredNode):
+    supplierID = UniqueIdProperty()
+
+    address = StringProperty()
+    city = StringProperty()
+    companyName = StringProperty()
+    contactName = StringProperty()
+    contactTitle = StringProperty()
+    country = StringProperty()
+    fax = StringProperty()
+    homePage = StringProperty()
+    phone = StringProperty()
+    postalCode = StringProperty()
+    region = StringProperty()
+    
+
 class Product(StructuredNode):
     productID = UniqueIdProperty()
 
@@ -24,6 +40,7 @@ class Product(StructuredNode):
 
 #     # Relations :
     categoryID = RelationshipTo(Category, 'PART_OF')
+    supplierID = RelationshipTo(Supplier, 'SUPPLIES')
 #     friends = RelationshipTo('Person','FRIEND')
 
 
