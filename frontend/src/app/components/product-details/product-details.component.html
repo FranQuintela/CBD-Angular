@@ -1,1 +1,66 @@
-<p>product-details works!</p>
+<div>
+    <div *ngIf="currentProduct.productID" class="edit-form row">
+        <div productID="product" class="col">
+            <p>{{ message }}</p>
+
+            <h4>Product</h4>
+            <form class="col">
+                <div class="form-group" class="list-group-item">
+
+                    <div class="form-group">
+                        <label for="productID">Id</label>
+                        <input type="text" class="form-control" productID="productID" [(ngModel)]="currentProduct.productID" name="productID" />
+                    </div>
+                    <div class="form-group">
+                        <label for="productName">productName</label>
+                        <input type="text" class="form-control" productName="productName" [(ngModel)]="currentProduct.productName" name="productName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="unitPrice">unitPrice</label>
+                        <input type="text" class="form-control" unitPrice="unitPrice" [(ngModel)]="currentProduct.unitPrice" name="unitPrice" />
+                    </div>
+                    
+                </div>
+            </form>
+            <!-- <button class="badge badge-danger mr-2 z-2" (click)="deleteProduct()">
+                Delete
+            </button> -->
+
+            <button type="submit" class="badge badge-success mb-2 z-2" (click)="updateProduct()">
+                Update
+            </button>
+        </div>
+        <div productID="product" class="col">
+            <p>{{ message }}</p>
+
+            <h4>Connect to Category</h4>
+            <form class="col">
+                <div class="form-group" class="list-group-item">
+
+                    <div class="form-group">
+                        <label for="productID">productID</label>
+                        <input type="text" class="form-control" productID="productID" [(ngModel)]="currentProduct.productID" name="productID" />
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="categoryID">categoryID</label>
+                        <input type="text" class="form-control" categoryID="categoryID" [(ngModel)]="currentProduct.categoryID" name="categoryID" />
+                    </div>
+                </div>
+            </form>
+            <!-- <button class="badge badge-danger mr-2 z-2" (click)="deleteProduct()">
+                Delete
+            </button> -->
+
+            <button type="submit" class="badge badge-success mb-2 z-2" (click)="connectPaC()">
+                connectPaC
+            </button>
+        </div>
+
+    </div>
+
+    <div *ngIf="!currentProduct.productID">
+        <br />
+        <p>Cannot access this Product...</p>
+    </div>
+</div>

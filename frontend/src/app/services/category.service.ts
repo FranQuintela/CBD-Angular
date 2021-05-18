@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product.model';
+import { Category } from '../models/category.model';
 
-const baseUrl = 'http://127.0.0.1:8000/api/products';
+const baseUrl = 'http://127.0.0.1:8000/api/categories';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Product[]> {
-    return this.http.get<Product[]>(baseUrl);
+  getAll(): Observable<Category[]> {
+    return this.http.get<Category[]>(baseUrl);
   }
 
-  get(id: any): Observable<Product> {
+  get(id: any): Observable<Category> {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
@@ -34,8 +34,6 @@ export class ProductService {
     return this.http.delete(`${baseUrl}/${id}`);
   }
  
-  connectPaC(id: any, data: any): Observable<any> {
-    return this.http.put(`${baseUrl}/categories`, data);
-  }
+  
   
 }

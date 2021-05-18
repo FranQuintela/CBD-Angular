@@ -29,10 +29,10 @@
           {{ currentProduct.unitPrice }}
         </div>
         
-  
-        <a class="badge badge-warning" routerLink="/products/{{ currentProduct.id }}">
+        <a class="btn btn-success" routerLink="/products/{{ currentProduct.productID }}">
           Edit
         </a>
+        
       </div>
   
       <div *ngIf="!currentProduct">

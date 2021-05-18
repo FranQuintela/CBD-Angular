@@ -9,13 +9,19 @@ import { ProductsListComponent } from './components/products-list/products-list.
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesListComponent } from './components/categories-list/categories-list.component';
+import { CategoriesDetailsComponent } from './components/categories-details/categories-details.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddProductComponent,
     ProductDetailsComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    CategoriesListComponent,
+    CategoriesDetailsComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,
