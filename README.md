@@ -12,7 +12,7 @@ We are ready now to start creating our django API.
 in django back_end -> settings.py replace username and password with the data we used on the neo4J desktop 
 NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL','bolt://username:password@localhost:7687')
 
-pip install django-cors-headers
+$ pip install django-cors-headers
 
 create models on models.py
 create index and constraints with: python manage.py install_labels
@@ -21,3 +21,10 @@ run scripts to load csv and MATCH relationships
 
 
 Para hacer un reset de la bd: CREATE OR REPLACE DATABASE neo4j
+
+
+PRIMERO HAY QUE ABRIR E INICIAR LA BD DE NEO4J
+
+NEO4J 
+Nuevo proyecto 
+Contraseña 

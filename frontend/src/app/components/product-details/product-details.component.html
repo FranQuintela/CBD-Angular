@@ -22,11 +22,11 @@
                     
                 </div>
             </form>
-            <!-- <button class="badge badge-danger mr-2 z-2" (click)="deleteProduct()">
+            <button class="badge alert-danger mr-2 z-2" (click)="deleteProduct()">
                 Delete
-            </button> -->
+            </button>
 
-            <button type="submit" class="badge badge-success mb-2 z-2" (click)="updateProduct()">
+            <button type="submit" class="badge alert-success mb-2 z-2" (click)="updateProduct()">
                 Update
             </button>
         </div>
@@ -48,14 +48,37 @@
                     </div>
                 </div>
             </form>
-            <!-- <button class="badge badge-danger mr-2 z-2" (click)="deleteProduct()">
-                Delete
-            </button> -->
+            
 
-            <button type="submit" class="badge badge-success mb-2 z-2" (click)="connectPaC()">
+            <button type="submit" class="badge alert-success mb-2 z-2" (click)="connectPaC()">
                 connectPaC
             </button>
         </div>
+        <div productID="product" class="col">
+            <p>{{ message }}</p>
+
+            <h4>Connect to Supplier</h4>
+            <form class="col">
+                <div class="form-group" class="list-group-item">
+
+                    <div class="form-group">
+                        <label for="productID">productID</label>
+                        <input type="text" class="form-control" productID="productID" [(ngModel)]="currentProduct.productID" name="productID" />
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="supplierID">supplierID</label>
+                        <input type="text" class="form-control" supplierID="supplierID" [(ngModel)]="currentProduct.supplierID" name="supplierID" />
+                    </div>
+                </div>
+            </form>
+            
+
+            <button type="submit" class="badge alert-success mb-2 z-2" (click)="connectPaS()">
+                connectPaS
+            </button>
+        </div>
+
 
     </div>
 

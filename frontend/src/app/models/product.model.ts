@@ -3,4 +3,6 @@ export class Product {
     productName?: string;
     unitPrice?: number;
     categoryID?: number;
+    supplierID?: number;
+
   }

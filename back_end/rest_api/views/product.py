@@ -7,8 +7,6 @@ import json
 def getAllProducts(request):
     if request.method == 'GET':
         try:
-            # products = Product.nodes.all()
-            # products = Product.nodes.filter(productID__lt="200")
             products = Product.nodes.all()
 
             response = []
@@ -79,9 +77,9 @@ def productDetails(request, productID):
 
     if request.method == 'DELETE':
         # delete one product
-        json_data = json.loads(request.body)        
+        # json_data = json.loads(request.body)        
 
-        productID = json_data['productID']
+        # productID = json_data['productID']
         try:
             product = Product.nodes.get(productID=productID)
             product.delete()

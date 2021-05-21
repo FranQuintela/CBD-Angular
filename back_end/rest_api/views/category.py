@@ -26,7 +26,7 @@ def getAllCategories(request):
         json_data = json.loads(request.body)
         categoryID = json_data['categoryID']
         categoryName = json_data['categoryName']
-        description = int(json_data['description'])
+        description = json_data['description']
         try:
             category = Category(categoryID = categoryID, categoryName=categoryName, description=description)
             category.save()
@@ -58,7 +58,7 @@ def categoryDetails(request, categoryID):
         # update one category
         json_data = json.loads(request.body)
         categoryName = json_data['categoryName']
-        description = int(json_data['description'])
+        description = json_data['description']
         try:
             category = Category.nodes.get(categoryID=categoryID)
             category.categoryName = categoryName
@@ -76,8 +76,8 @@ def categoryDetails(request, categoryID):
 
     if request.method == 'DELETE':
         # delete one category
-        json_data = json.loads(request.body)
-        categoryID = json_data['categoryID']
+        # json_data = json.loads(request.body)
+        # categoryID = json_data['categoryID']
         try:
             category = Category.nodes.get(categoryID=categoryID)
             category.delete()

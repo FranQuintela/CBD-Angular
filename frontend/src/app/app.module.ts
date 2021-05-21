@@ -10,8 +10,10 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesListComponent } from './components/categories-list/categories-list.component';
-import { CategoriesDetailsComponent } from './components/categories-details/categories-details.component';
-import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { SuppliersListComponent } from './components/suppliers-list/suppliers-list.component';
+import { CategoryDetailsComponent } from './components/category-details/category-details.component';
+import { SupplierDetailsComponent } from './components/supplier-details/supplier-details.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +22,9 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
     ProductDetailsComponent,
     ProductsListComponent,
     CategoriesListComponent,
-    CategoriesDetailsComponent,
-    AddCategoryComponent
+    SuppliersListComponent,
+    CategoryDetailsComponent,
+    SupplierDetailsComponent,
   ],
   imports: [
     BrowserModule,

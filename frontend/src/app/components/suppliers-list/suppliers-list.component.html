@@ -1,0 +1,43 @@
+<div class="list row">
+    
+    <div class="col-md-6">
+      <h4>Suppliers List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let supplier of suppliers; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveSupplier(supplier, i)"
+        >
+          {{ supplier.contactName }}
+        </li>
+      </ul>
+  
+      
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentSupplier">
+        <h4>Supplier</h4>
+        <div>
+            <label><strong>Supplier ID:</strong></label> {{ currentSupplier.supplierID }}
+          </div>
+        <div>
+          <label><strong>Supplier Name:</strong></label> {{ currentSupplier.contactName }}
+        </div>
+        <div>
+          <label><strong>Company Name:</strong></label>
+          {{ currentSupplier.companyName }}
+        </div>
+        
+        <a class="btn btn-success" routerLink="/suppliers/{{ currentSupplier.supplierID }}">
+          Edit
+        </a>
+        
+      </div>
+  
+      <div *ngIf="!currentSupplier">
+        <br />
+        <p>Please click on a Supplier...</p>
+      </div>
+    </div>
+  </div>

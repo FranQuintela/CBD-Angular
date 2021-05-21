@@ -79,9 +79,9 @@ export class ProductDetailsComponent implements OnInit {
   connectPaS(): void {
     let data = {
       "productID": this.currentProduct.productID,
-      "categoryID": this.currentProduct.categoryID
+      "supplierID": this.currentProduct.supplierID
     }
-    this.productService.connectPaC(this.currentProduct.productID, data)
+    this.productService.connectPaS(this.currentProduct.productID, data)
       .subscribe(
         response => {
           console.log(response);

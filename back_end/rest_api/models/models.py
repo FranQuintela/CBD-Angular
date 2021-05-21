@@ -41,7 +41,6 @@ class Product(StructuredNode):
 #     # Relations :
     categoryID = RelationshipTo(Category, 'PART_OF')
     supplierID = RelationshipTo(Supplier, 'SUPPLIES')
-#     friends = RelationshipTo('Person','FRIEND')
 
 
 

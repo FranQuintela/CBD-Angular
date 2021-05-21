@@ -1,0 +1,42 @@
+<div>
+    <div *ngIf="currentCategory.categoryID" class="edit-form row">
+        <div categoryID="category" class="col">
+            <p>{{ message }}</p>
+
+            <h4>Category</h4>
+            <form class="col">
+                <div class="form-group" class="list-group-item">
+
+                    <div class="form-group">
+                        <label for="categoryID">Id</label>
+                        <input type="text" class="form-control" categoryID="categoryID" [(ngModel)]="currentCategory.categoryID" name="categoryID" />
+                    </div>
+                    <div class="form-group">
+                        <label for="categoryName">categoryName</label>
+                        <input type="text" class="form-control" categoryName="categoryName" [(ngModel)]="currentCategory.categoryName" name="categoryName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">description</label>
+                        <input type="text" class="form-control" description="description" [(ngModel)]="currentCategory.description" name="description" />
+                    </div>
+                    
+                </div>
+            </form>
+            <button class="badge alert-danger mr-2 z-2" (click)="deleteCategory()">
+                Delete
+            </button>
+
+            <button type="submit" class="badge alert-success mb-2 z-2" (click)="updateCategory()">
+                Update
+            </button>
+        </div>
+
+
+
+    </div>
+
+    <div *ngIf="!currentCategory.categoryID">
+        <br />
+        <p>Cannot access this Category...</p>
+    </div>
+</div>
